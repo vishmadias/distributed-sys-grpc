@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.ds.grpc;
+
+message MatrixRequest {
+    string matrixA = 1;
+    string matrixB = 2;
+}
+
+message MatrixResponse {
+    string matrix = 1;
+}
+
+service MatrixService {
+    rpc AddBlock(MatrixRequest) returns (MatrixResponse){}
+    rpc MultiplyBlock(MatrixRequest) returns (MatrixResponse){}
+}

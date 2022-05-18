@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "b7a480b1-63de-4459-92d5-2677251cd30b",
+		"name": "F1-distributed computing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "matrixFile1",
+							"type": "file",
+							"src": "/D:/work/FL/c1-distributed sys/ECS656U-distributed-systems-main/coursework/src/main/resources/matrixFile1.txt"
+						},
+						{
+							"key": "matrixFile2",
+							"type": "file",
+							"src": "/D:/work/FL/c1-distributed sys/ECS656U-distributed-systems-main/coursework/src/main/resources/matrixFile2.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/matrix-multiply?deadline=10000000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"matrix-multiply"
+					],
+					"query": [
+						{
+							"key": "deadline",
+							"value": "10000000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
